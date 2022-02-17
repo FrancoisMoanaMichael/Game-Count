@@ -2,8 +2,8 @@ import { useState } from 'react';
 import './App.scss';
 
 function App() {
-  const [playerName, setPlayerName] = useState("")
-  const [playerNameSubmited, setPlayerNameSubmited] = useState(true)
+  const [playerName, setPlayerName] = useState("name")
+  const [playerNameSubmited, setPlayerNameSubmited] = useState(false)
   const playerinpute = (event) => {
     setPlayerName(event.target.value)
   console.log(event.target.value)
@@ -18,8 +18,8 @@ console.log('double click')
     setPlayerNameSubmited(true)
   }
 
-  const [playerScore, setPlayerScore] = useState("")
-  const [playerScoreSubmited, setPlayerScoreSubmited] = useState(true)
+  const [playerScore, setPlayerScore] = useState(0)
+  const [playerScoreSubmited, setPlayerScoreSubmited] = useState(false)
   const playerScoreinpute = (event) => {
     setPlayerScore(event.target.value)
     console.log(event.target.value)
@@ -41,10 +41,10 @@ console.log('double click')
             <div className='player-card-container'>
         <div className='player-card'>
           <form onDoubleClick={handleChangePlayerName} type="text" className='player-card-name'  onSubmit={handlesubmit} >
-            {playerNameSubmited ? <input type='text' onChange={playerinpute} ></input> : playerName}
+            {playerNameSubmited ? <input className='player-input' type='text' onChange={playerinpute} ></input> : playerName}
                     </form>
           <form onDoubleClick={handleChangePlayerScore} type="text" className='player-card-score' onSubmit={handlesubmitScore} >
-            {playerScoreSubmited ? <input type='text' onChange={playerScoreinpute} ></input> : playerScore}
+            {playerScoreSubmited ? <input className='player-input' type='number' onChange={playerScoreinpute} ></input> : playerScore}
            </form>
                     <div className='player-card-total'>
             {playerScore}

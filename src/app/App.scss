@@ -58,12 +58,17 @@ height: fit-content;
     height: 3rem;
     align-items: center;
     justify-content: center;
+    &:hover{
+        background-color: rgba(51, 255, 0, 0.39);
+    }
     }
     &-score{
     display: flex;
     height: 3rem;
     align-items: center;
-    justify-content: center;
+    justify-content: center;&:hover{
+        background-color: rgba(184, 184, 184, 0.239);
+    }
     }
     &-total{
         background-color: rgba(128, 128, 128, 0.274);
@@ -77,4 +82,9 @@ height: fit-content;
 // footer part
 .total{
 background-color: #f0f;
+}
+.player-input{
+    border: none;
+    border-radius: 2rem;
+    width: 4rem;
 }
