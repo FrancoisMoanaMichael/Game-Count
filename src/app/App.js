@@ -95,7 +95,6 @@ return (
           {[...Array(row)].map((elementInArray, index) => (
             <p key={index} className='player-input'>{play[index - 1]}</p>
           ))}
-          
           <div className='player-card-total'>
             {total}
           </div>
