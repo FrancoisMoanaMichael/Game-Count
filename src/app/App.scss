@@ -8,30 +8,7 @@
     flex-direction: column;
 }
 // all cart container
-.player-card-container{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    overflow-x: scroll;
-    overflow-y: scroll;
-    border-radius: 5px;
-    margin: 20%;
-    min-width: 7rem;
-    max-height: 32rem;
-    /* width: fit-content; */
-    width: fit-content;
-    max-width: 60%;
-&::-webkit-scrollbar {
-  height: 0.5rem;
-}
-&::-webkit-scrollbar-thumb {
-  background: rgb(182, 182, 182); 
-  border-radius: 0.5rem;
-}
-&::-webkit-scrollbar-thumb:hover {
-  background: rgb(145, 144, 144); 
-}
-}
+
 // header part
 .game-name{
     border-bottom: 2px solid black;
@@ -43,59 +20,13 @@
     align-items: center;
     margin-bottom: 5rem; 
 }
+.btn-container{
+    bottom: 65px;
+    position: fixed;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
 
-// main part 
-.player-card{
-    margin: 0.3rem;
-min-width: 6rem;
-max-width: 11rem;
-height: fit-content;
-    &-name{
-    background-color: #f00;
-    display: flex;
-    height: 3rem;
-    align-items: center;
-    justify-content: center;
-    &:hover{
-        background-color: rgba(51, 255, 0, 0.39);
-    }
-    }
-    &-score{
-    display: flex;
-    height: 3rem;
-    align-items: center;
-    justify-content: center;&:hover{
-        background-color: rgba(184, 184, 184, 0.239);
-    }
-    }
-    &-total{
-        background-color: rgba(128, 128, 128, 0.274);
-    display: flex;
-    height: 2.5rem;
-    align-items: center;
-    justify-content: center;
-    }
-}
 // ============================
-// footer part
-.total{
-background-color: #f0f;
-}
-.player-input{
-    border: none;
-    border-radius: 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    max-width: 6rem;
-}
-.score-container{
-    display: flex;
-}
-.player-card-score{
-    background-color: rgba(255, 0, 255, 0.582);
-    border: none;
-    width: 100%;
-    height: 3rem;
-    
-}
