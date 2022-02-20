@@ -1,8 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Leaderboard from '../leaderboard/leaderboard';
-import Fab from '@mui/material/Fab';
-import Draggable from 'react-draggable';
-import Dialog from '@mui/material/Dialog';
+import Fab from '@mui/material/Fab'; 
 import AddIcon from '@mui/icons-material/Add';
 import ClearIcon from '@mui/icons-material/Clear';
 
@@ -39,14 +37,15 @@ return (
   <div className="App">
     <div className='game-name'>
       <h1>Game Count</h1>
-    <p>nombre de joueur:{newPlayer}</p>
+      <p> {newPlayer} joueur{newPlayer>1? 's' : null}</p>
     <div className='btn-nb'>
     <Fab className='button-player' color="primary" aria-label="add" onClick={addPlayer}>
       <AddIcon />
     </Fab>
+    {newPlayer >= 1 ? 
     <Fab className='button-player' color="primary" aria-label="del" onClick={addDeletPlayer}>
       <ClearIcon />
-    </Fab>
+    </Fab> : null}
     </div>
     </div>
     <div className='player-card-container'>
