@@ -4,7 +4,7 @@ import './leaderboard.scss';
 
 const Leaderboard = ({ index, ...rest }) => {
 
-    const [playerNameSubmited, setPlayerNameSubmited] = useState(false)
+    const [playerNameSubmited, setPlayerNameSubmited] = useState(true)
     const [playerName, setPlayerName] = useState("name")
     const handlesubmit = (event) => {
         event.preventDefault();
@@ -62,14 +62,14 @@ const Leaderboard = ({ index, ...rest }) => {
     }
 
    return (
-    <div>
+    <div className='card'>
            {/* player-card static   */}
                        <form onDoubleClick={handleChangePlayerName} type="text" className='player-card-name' onSubmit={handlesubmit} >
-                           {playerNameSubmited ? <input className='player-input' type='text' onChange={playerinpute} ></input> : playerName}
+                           {playerNameSubmited ? <input placeholder='         entrez votre nom' className='player-input' type='text' onChange={playerinpute} ></input> : playerName}
                        </form>
                    <div key={index} className='player-card'>
                        <form onDoubleClick={handleChangePlayerScore} type="text" className='player-card-score' onSubmit={handlesubmitScore} >
-                   <input className='player-input' placeholder='entrez votre score' type='number' onChange={playerScoreinpute} ></input> 
+                   <input className='player-input' placeholder='       entrez votre score' type='number' onChange={playerScoreinpute} ></input> 
                        </form>
                        <div className='score-container'>
                        {[...Array(row)].map((elementInArray, index) => (
@@ -80,7 +80,7 @@ const Leaderboard = ({ index, ...rest }) => {
                            {total}
                        </div>
                    </div>
-         
+           
     </div>
         )
 };

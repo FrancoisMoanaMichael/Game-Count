@@ -3,14 +3,16 @@
 background-color: #f0f;
 }
 .player-input{
-    font-size: 1rem;
+    color: black;
+    font-size: 24px;
     border-radius: 2rem;
     width: 100%;
     display: flex;
-    justify-content: center;
     border: none;
     height: 94%;
-
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
 }
 .player-card-score{
     border: none;
@@ -30,15 +32,11 @@ background-color: #f0f;
     height: fit-content;
     flex-direction: column-reverse;
     &-name{
-        text-decoration: underline;
-        font-size: 2rem;
+    font-size: 2rem;
     display: flex;
     height: 3rem;
     align-items: center;
     justify-content: center;
-    &:hover{
-        background-color: rgba(51, 255, 0, 0.39);
-    }
     }
     &-score{
     display: flex;
@@ -55,12 +53,18 @@ background-color: #f0f;
     justify-content: center;
     }
 }
+.card{
+    
+    background-color: rgba(197, 197, 197, 0.459);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
 .player-card-container{
- display: flex;
+    display: flex;
     flex-direction: row;
     overflow-x: scroll;
     overflow-y: scroll;
-    border-radius: 5px;
     min-width: 7rem;
     width: -moz-fit-content;
     width: fit-content;

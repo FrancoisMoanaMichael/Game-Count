@@ -11,22 +11,25 @@
 
 // header part
 .game-name{
+    display: flex;
     border-bottom: 2px solid black;
     display: flex;
-    height: 3rem;
-    /* background-color: #f00; */
     font-size: 2rem;
-    justify-content: center;
+    margin-bottom: 5rem;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 5rem; 
+    flex-wrap: wrap;
 }
 .btn-container{
-    bottom: 65px;
-    position: fixed;
     display: flex;
     align-content: center;
     flex-wrap: wrap;
     flex-direction: row;
 }
-
+.btn-nb{
+    margin: 1rem;
+}
 // ============================
+.button-player{
+    margin: 0 1rem;
+}
